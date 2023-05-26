@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 22px 51px;
+  box-shadow: 0 1px 0 rgba(17, 17, 17, 0.1);
+
+  .header__login {
+    img {
+      width: 175px;
+    }
+  }
+
+  .header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    flex: 1;
+
+    .nav__link {
+      font-size: 14px;
+      opacity: 1;
+      transition: all .3s ease;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}

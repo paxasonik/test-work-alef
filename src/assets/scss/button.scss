@@ -1,0 +1,62 @@
+.button {
+  position: relative;
+  min-height: 44px;
+  border: 2px solid #01A7FD;
+  border-radius: 22px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #01A7FD;
+  transition: all .3s ease;
+
+  &.button__plus {
+    padding-left: 48px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 12px;
+      height: 12px;
+      background-image: url("@/assets/plus.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      filter: brightness(0) saturate(100%) invert(45%) sepia(70%) saturate(1844%) hue-rotate(172deg) brightness(102%) contrast(102%);
+      transition: all .3s ease;
+    }
+
+    &:hover {
+      background-color: #01A7FD;
+      color: #FFFFFF;
+
+      &:before {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7429%) hue-rotate(8deg) brightness(114%) contrast(112%);
+      }
+    }
+  }
+
+  &.button__not-border {
+    border: 0;
+  }
+
+  &.button__bg {
+    color: #FFFFFF;
+    background-color: #01A7FD;
+
+    &:hover {
+      color: #01A7FD;
+      background-color: #FFFFFF;
+    }
+  }
+
+  &:hover {
+    color: #FFFFFF;
+    background-color: #01A7FD;
+  }
+
+  &:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+}

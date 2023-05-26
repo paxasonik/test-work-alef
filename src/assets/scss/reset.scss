@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+body {
+  min-width: 320px;
+  background-color: #fff;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #111111;
+  line-height: 1.5;
+}
+input,
+button,
+textarea {
+  font-family: "Montserrat", "Arial", sans-serif;
+  outline: none;
+  outline-offset: 0;
+}
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+a {
+  color: inherit;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
