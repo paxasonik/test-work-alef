@@ -9,6 +9,8 @@ const props = defineProps({
 		default: 'text'
 	},
 	name: String,
+	label: String,
+	id: String,
 	placeholder: String,
 	dataMaska: String,
 	dataMaskaTokens: String,
@@ -24,16 +26,20 @@ const updateInput = (event) => {
 </script>
 
 <template>
-	<input
-		:type="props.type"
-		:name="props.name"
-		:placeholder="props.placeholder"
-		:value="props.modelValue"
-		@input="updateInput"
-		v-maska
-		:data-maska="props.dataMaska"
-		:data-maska-tokens="props.dataMaskaTokens"
-	>
+	<div class="form__input">
+		<label :for="props.id">{{ props.label }}</label>
+		<input
+			:type="props.type"
+			:name="props.name"
+			:placeholder="props.placeholder"
+			:value="props.modelValue"
+			:id="props.id"
+			@input="updateInput"
+			v-maska
+			:data-maska="props.dataMaska"
+			:data-maska-tokens="props.dataMaskaTokens"
+		>
+	</div>
 </template>
 
 <style scoped>

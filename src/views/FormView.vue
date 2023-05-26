@@ -40,53 +40,53 @@ watch(() => form.value, (newVal, oldVal) => {
 </script>
 
 <template>
-	<section>
-		<form class="">
-			<div class="">
-				<h3>Персональные данные</h3>
+	<section class="container">
+		<form class="content__form form">
+			<div class="form__parent">
+				<h3 class="form__title">Персональные данные</h3>
 				<FormInput
 					type="text"
 					v-model="form.name"
-					placeholder="Имя"
+					label="Имя"
+					id="parent_name"
 					data-maska="X"
 					data-maska-tokens="X:[а-яёА-ЯЁa-zA-Z\s-]:multiple"
 				/>
 				<FormInput
 					type="text"
 					v-model.number="form.age"
-					placeholder="Возраст"
+					label="Возраст"
+					id="parent_age"
 					data-maska="###"
 				/>
 			</div>
-			<div class="">
-				<div class="">
-					<h3>Дети (макс. 5)</h3>
-					<button @click.prevent="addChildren" v-if="form.children.length < 5">Добавить ребенка</button>
+			<div class="form__children">
+				<div class="form__row">
+					<h3 class="form__title">Дети (макс. 5)</h3>
+					<button class="button button__plus" @click.prevent="addChildren" v-if="form.children.length < 5">Добавить ребенка</button>
 				</div>
-				<ul>
-					<li v-for="(item, index) in form.children" :key="index">
+				<ul class="form__list">
+					<li class="form__item" v-for="(item, index) in form.children" :key="index">
 						<FormInput
 							type="text"
 							v-model="item.name"
-							placeholder="Имя"
+							label="Имя"
+							:id="'children_name' + index"
 							data-maska="X"
 							data-maska-tokens="X:[а-яёА-ЯЁa-zA-Z\s-]:multiple"
 						/>
 						<FormInput
 							type="text"
 							v-model.number="item.age"
-							placeholder="Возраст"
+							label="Возраст"
+							:id="'children_age' + index"
 							data-maska="###"
 						/>
-						<button @click.prevent="deleteChildren(index)">Удалить</button>
+						<button class="button button__not-border" @click.prevent="deleteChildren(index)">Удалить</button>
 					</li>
 				</ul>
 			</div>
-			<button type="submit" @click.prevent="submit" :disabled="!isChangedForm">Сохранить</button>
+			<button class="button button__bg" type="submit" @click.prevent="submit" :disabled="!isChangedForm">Сохранить</button>
 		</form>
 	</section>
 </template>
-
-<style scoped>
-
-</style>

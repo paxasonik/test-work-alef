@@ -1,0 +1,48 @@
+.content__form {
+
+  .form__title {
+    font-weight: 500;
+  }
+
+  .form__parent {
+    .form__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .form__children {
+    margin-top: 33px;
+
+    .form__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .form__list {
+      margin-top: 10px;
+      margin-bottom: 30px;
+
+      .form__item {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+
+        .form__input {
+          margin-bottom: 0;
+        }
+      }
+      @media screen and (max-width: 991px) {
+        .form__item {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
