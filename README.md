@@ -1,5 +1,7 @@
 # test-work-alef
 
+## [Open Vue-shop page](https://test-work-alef-rr9ac4nq5-paxasonik.vercel.app/)
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
